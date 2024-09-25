@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WebBanHangOnline.Models.EF.Product>
+
+@if (Model != null && Model.Any())
+{
+    <div class="row">
+        <div class="col text-center">
+            <div class="section_title new_arrivals_title">
+                <h2>SẢN PHẨM KHUYẾN MÃI</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+                @Html.Action("Partial_ProductSales", "Products")
+            </div>
+        </div>
+    </div>
+}
